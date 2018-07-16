@@ -1,0 +1,30 @@
+na = "Tom"
+nals = ["Tom","Sam","Freddy"]
+di1 = {"Tom":22,"Sam":21,"Freddy":20}
+
+
+def name(n,l):
+    if n in l:
+        return("Name in list")
+    elif n not in l:
+        l.append(n)
+        return(l)
+def diction(x):
+  input_name = input("Your name plz?")
+  if input_name in x:
+    return("your age is",x[input_name])
+  if input_name not in x:
+    age = input("your age plz?")
+    x[input_name] = age
+    return x
+
+print(diction(di1))
+print("The",name(na, nals))
+num_list = [0,5,10,15,20,25,30]
+def MissingNo(a):
+    missingNums = []
+    for o in range(min(a),max(a)):
+         if o not in a:
+             missingNums.append(o)
+    return missingNums
+print("This number are not in the list",MissingNo(num_list))
